@@ -1,7 +1,8 @@
 import BlogList from "./BlogList";
 import useFetch from "./useFetch";
+
 const Home = () => {
-    const {data:blogs, isLoading, error} = useFetch(' http://localhost:8000/blogs')
+    const {data:blogs, isLoading, error} = useFetch(' http://localhost:8000/blogs');
 
     
 
@@ -9,7 +10,7 @@ const Home = () => {
         <div className="home">
           { error && <div> {error}</div> }
           { isLoading && <div>Loading...</div> }
-          { blogs && <BlogList blogs={blogs}  ></BlogList> }
+          { blogs && <BlogList blogs={blogs}  />}
             
         </div>
      );
